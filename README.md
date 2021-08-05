@@ -1,5 +1,6 @@
 # CoreJS
 * [Understanding the Keyword THIS in JavaScript (video)](https://www.youtube.com/watch?v=syhNj7X0Vvk)
+* [Gentle Explanation of "this" in JavaScript (long read article)](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
 
 *This* is the context of a function invocation.
 
