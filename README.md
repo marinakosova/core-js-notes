@@ -20,7 +20,7 @@ JavaScript is a *loosely typed* and *dynamic* language.
 
 The latest ECMAScript standard defines **nine types**: undefined, boolean, number, string, bigInt, symbol, object, function, null.
 
-TypeOf: 
+TypeOf for Data Types and instanceof for Structural Types: 
 - {} - Object
 - Function - function
 - Array - Object
