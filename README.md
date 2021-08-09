@@ -14,13 +14,13 @@
 
 *Context* in JavaScript is related to objects.
 
-[JavaScript data types and data structures (article)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+* [JavaScript data types and data structures (article)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
 
-* JavaScript is a *loosely typed* and *dynamic* language.
+JavaScript is a *loosely typed* and *dynamic* language.
 
-* The latest ECMAScript standard defines **nine types**: undefined, boolean, number, string, bigInt, symbol, object, function, null.
+The latest ECMAScript standard defines **nine types**: undefined, boolean, number, string, bigInt, symbol, object, function, null.
 
-* TypeOf: 
+TypeOf: 
 - {} - Object
 - function - function
 - array - Object
