@@ -13,3 +13,23 @@
 *Scope* refers to visibility of variables (in scope or not).
 
 *Context* in JavaScript is related to objects.
+
+[JavaScript data types and data structures (article)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+
+* JavaScript is a *loosely typed* and *dynamic* language.
+
+* The latest ECMAScript standard defines **nine types**: undefined, boolean, number, string, bigInt, symbol, object, function, null.
+
+* TypeOf: 
+- {} - Object
+- function - function
+- array - Object
+- null - Object
+- new String/Boolean/Number - Object
+- undefined - undefined
+- true - boolean
+- "Text" - string
+- alert - function
+- [] - object
+- new Date - object
+
