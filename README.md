@@ -22,8 +22,8 @@ The latest ECMAScript standard defines **nine types**: undefined, boolean, numbe
 
 TypeOf: 
 - {} - Object
-- function - function
-- array - Object
+- Function - function
+- Array - Object
 - null - Object
 - new String/Boolean/Number - Object
 - undefined - undefined
