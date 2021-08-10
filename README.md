@@ -45,3 +45,14 @@ reduce(callbackFn, initialValue)
 reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
 ```
 
+* [Expressions vs. Statements in JS (video)](https://www.youtube.com/watch?v=WVyCrI1cHi8)
+
+* [Function declaration vs. function expression (article)](https://medium.com/@mandeep1012/function-declarations-vs-function-expressions-b43646042052)
+
+Function declarations load before any code is executed while Function expressions load only when the interpreter reaches that line of code.
+
+Similar to the var statement, function declarations are hoisted to the top of other code. Function expressions aren’t hoisted, which allows them to retain a copy of the local variables from the scope where they were defined.
+
+
+
+
