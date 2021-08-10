@@ -33,3 +33,15 @@ TypeOf for Data Types and instanceof for Structural Types:
 - [] - object
 - new Date - object
 
+* [Hight order function REDUCE (video)](https://www.youtube.com/watch?v=6_XzV25rkcE)
+``` javascript
+// Arrow function
+reduce((accumulator, currentValue, index, array) => { ... }, initialValue)
+
+// Callback function
+reduce(callbackFn, initialValue)
+
+// Inline callback function
+reduce(function callbackFn(accumulator, currentValue, index, array) { ... }, initialValue)
+```
+
