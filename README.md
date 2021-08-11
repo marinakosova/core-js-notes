@@ -55,4 +55,10 @@ Similar to the var statement, function declarations are hoisted to the top of ot
 
 * [Typing (Type coercion): Static vs Dynamic, Weak vs. Strong (video)](https://www.youtube.com/watch?v=C5fr0LZLMAs)
 
+* [The JS Call Stack Explained In 9 Minutes (video](https://www.youtube.com/watch?v=W8AeMrVtFLY)
 
+What is the Call Stack? A "todo list" of function invocations (Last In, First out).
+
+Whenever you invoke a function, the details of the invocation are saved to the top of the stack (pushed to the top).
+
+Whenever a function returns, the info about the invocation is taken off the top of the stack (popped off of the top).
