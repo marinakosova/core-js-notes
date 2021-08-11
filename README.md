@@ -62,3 +62,8 @@ What is the Call Stack? A "todo list" of function invocations (Last In, First ou
 Whenever you invoke a function, the details of the invocation are saved to the top of the stack (pushed to the top).
 
 Whenever a function returns, the info about the invocation is taken off the top of the stack (popped off of the top).
+
+* [Learn JS event loop (video)](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+
+**00:53** how does javascript actually work ? **02:46** V8, setTimeout **04:03** the call tack **07:18** blocking, what happens when things are slow **10:35** aynchronous callbacks, setTimout **11:1**3 aynchronous callbacks, the call stack **11:56** concurrency **12:50** stack, webapis, eventloop, task queue, console
+
