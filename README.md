@@ -80,7 +80,7 @@ There can only be one global context but any number of function contexts.
 
 The execution context has two phases of creation and code execution.
 
-* [Closure (article)](https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4)
+* [Closure (article)](https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4), [Closure (article)](https://dmitripavlutin.com/simple-explanation-of-javascript-closures/)
 
 What is a closure? A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function’s variables — a scope chain.
 The closure has three scope chains:
@@ -90,6 +90,8 @@ it has access to its own scope — variables defined between its curly brackets;
 it has access to the outer function’s variables;
 
 it has access to the global variables.
+
+**A rule of thumb to identify a closure: if inside a function you see an alien variable (not defined inside that function), most likely that function is a closure because the alien variable is captured.**
 
 ``` javascript
 let a = 4;
