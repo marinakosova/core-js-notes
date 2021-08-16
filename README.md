@@ -91,5 +91,40 @@ it has access to the outer function’s variables;
 
 it has access to the global variables.
 
+``` javascript
+let a = 4;
+
+function myFunction() {
+    return a * a;
+}
+
+// another example
+function OuterFunction() {
+
+    var outerVariable = 1;
+
+    function InnerFunction() {
+        alert(outerVariable);
+    }
+
+    InnerFunction();
+}
+
+// another example
+function outerFunc() {
+    let outerVar = 'I am outside!';
+  
+    function innerFunc() {
+      console.log(outerVar); // => logs "I am outside!"
+    }
+  
+    return innerFunc;
+  }
+  
+  const myInnerFunc = outerFunc();
+  myInnerFunc();
+```
+
+
 
 
