@@ -226,3 +226,63 @@ myObject.myMethod([1, 2, 3]);
 ```
 
 *this* value inside the arrow function *callback()* equals to *this* of the outer function *myMethod()*.
+
+### Constructors
+
+A consequence of *this* resolved lexically is that an arrow function cannot be used as a constructor.
+
+If you try to invoke an arrow function prefixed with *new* keyword, JavaScrip throws an error:
+
+``` javascript
+const Car = (color) => {
+    this.color = color;
+};
+
+const redCar = new Car('red'); // TypeError: Car is not a constructor
+```
+### *arguments* object
+
+Again (same as with *this* value), the *arguments* object is resolved lexically: the arrow function accesses *arguments* from the outer function.
+
+``` javascript
+function myRegularFunction() {
+    const myArrowFunction = (...args) => {
+        console.log(args);
+    }
+
+    myArrowFunction('c', 'd');
+}
+
+myRegularFunction('a', 'b'); // logs ['c', 'd']
+```
+
+*...args* rest parameter collects the execution arguments of the arrow function: *['c', 'd']*.
+
+### Implicit *return*
+
+If the arrow function contains one expression, and you omit the function’s curly braces, then the expression is implicitly returned. These are the inline arrows function.
+
+``` javascript
+const increment = (num) => num + 1;
+
+increment(41); // => 42
+```
+### Methods
+
+The method defined using an arrow binds *this* lexically to the class instance.
+
+``` javascript
+class Hero {
+    constructor(heroName) {
+        this.heroName = heroName;
+    }
+
+    logName = () => {
+        console.log(this.heroName);
+    }
+}
+
+const batman = new Hero('Batman');
+```
+
+Now you can use *batman.logName* as a callback without any manual binding of *this*.
