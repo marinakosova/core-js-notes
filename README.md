@@ -186,4 +186,8 @@ this will return an error:
 let greeting = "say Hi";
 let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
 ```
-    
+
+### Hoisting of *let*
+
+
+Just like *var*, *let* declarations are hoisted to the top. Unlike *var* which is initialized as undefined, the *let* keyword is not initialized. So if you try to use a *let* variable before declaration, you'll get a *Reference Error*.
