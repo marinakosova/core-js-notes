@@ -127,7 +127,9 @@ function outerFunc() {
   myInnerFunc();
 ```
 
-* [Var, Let, and Const – What's the Difference?]()
+* [Var, Let, and Const – What's the Difference?](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
+
+### Var
 
 Scope essentially means where these variables are available for use. *var* declarations are globally scoped or function/locally scoped.
 
@@ -148,9 +150,9 @@ if (times > 3) {
 console.log(greeter) // "say Hello instead"
 ```
 
-### Problem with var
+### Problem with *var*
 
-There's a weakness that comes with  var. I'll use the example below to explain:
+There's a weakness that comes with *var*. I'll use the example below to explain:
 
 ``` javascript
 var greeter = "hey hi";
@@ -164,3 +166,24 @@ console.log(greeter) // "say Hello instead"
 ```
 
 So, since *times > 3* returns true, *greeter* is redefined  to *"say Hello instead"*. While this is not a problem if you knowingly want *greeter* to be redefined, it becomes a problem when you do not realize that a variable *greeter* has already been defined before.
+
+### Let
+
+*let* is now preferred for variable declaration. It's no surprise as it comes as an improvement to *var* declarations.
+
+A variable declared in a block with *let* is only available for use within that block.
+
+Just like *var*, a variable declared with let can be updated within its scope. Unlike *var*, a *let* variable cannot be re-declared within its scope. So while this will work:
+
+``` javascript
+let greeting = "say Hi";
+greeting = "say Hello instead";
+```
+
+this will return an error:
+
+``` javascript
+let greeting = "say Hi";
+let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
+```
+    
