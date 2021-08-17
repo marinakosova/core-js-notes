@@ -189,5 +189,18 @@ let greeting = "say Hello instead"; // error: Identifier 'greeting' has already 
 
 ### Hoisting of *let*
 
-
 Just like *var*, *let* declarations are hoisted to the top. Unlike *var* which is initialized as undefined, the *let* keyword is not initialized. So if you try to use a *let* variable before declaration, you'll get a *Reference Error*.
+
+### Const
+
+Variables declared with the *const* maintain constant values. *const* declarations share some similarities with *let* declarations.
+
+Like *let* declarations, *const* declarations can only be accessed within the block they were declared.
+
+*const* cannot be updated or re-declared. This means that the value of a variable declared with *const* remains the same within its scope. It cannot be updated or re-declared.
+
+This behavior is somehow different when it comes to objects declared with *const*. While a *const* object cannot be updated, the properties of this objects can be updated.
+
+### Hoisting of *const*
+
+Just like *let*, *const* declarations are hoisted to the top but are not initialized.
