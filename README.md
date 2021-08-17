@@ -127,6 +127,24 @@ function outerFunc() {
   myInnerFunc();
 ```
 
+* [Var, Let, and Const – What's the Difference?]()
 
+Scope essentially means where these variables are available for use. *var* declarations are globally scoped or function/locally scoped.
 
+The scope is global when a *var* variable is declared outside a function. This means that any variable that is declared with *var* outside a function block is available for use in the whole window.
+
+*var* is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.
+
+*var* variables are hoisted to the top of their scope and initialized with a value of undefined.
+
+``` javascript
+var greeter = "hey hi";
+var times = 4;
+
+if (times > 3) {
+    var greeter = "say Hello instead";
+}
+
+console.log(greeter) // "say Hello instead"
+```
 
