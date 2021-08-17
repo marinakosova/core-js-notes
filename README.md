@@ -204,3 +204,25 @@ This behavior is somehow different when it comes to objects declared with *const
 ### Hoisting of *const*
 
 Just like *let*, *const* declarations are hoisted to the top but are not initialized.
+
+* [Arrow functions, the basics](https://dmitripavlutin.com/differences-between-arrow-and-regular-functions/)
+
+### This value
+
+No matter how or where being executed, *this* value inside of an arrow function always equals *this* value from the outer function. In other words, the arrow function resolves *this* lexically.
+
+``` javascript
+const myObject = {
+    myMethod(items) {
+        console.log(this); // logs myObject
+        const callback = () => {
+            console.log(this); // logs myObject
+        };
+        items.forEach(callback);
+    }
+};
+
+myObject.myMethod([1, 2, 3]);
+```
+
+*this* value inside the arrow function *callback()* equals to *this* of the outer function *myMethod()*.
