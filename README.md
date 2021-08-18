@@ -80,7 +80,7 @@ There can only be one global context but any number of function contexts.
 
 The execution context has two phases of creation and code execution.
 
-* [Closure (article)](https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4), [Closure (article)](https://dmitripavlutin.com/simple-explanation-of-javascript-closures/)
+* [Closure (article)](https://medium.com/@prashantramnyc/javascript-closures-simplified-d0d23fa06ba4), [Closure (article)](https://dmitripavlutin.com/simple-explanation-of-javascript-closures/), [WTF Is JavaScript Variable Hoisting](https://www.youtube.com/watch?v=j-9_15QBW2s)
 
 What is a closure? A closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function’s variables — a scope chain.
 The closure has three scope chains:
@@ -127,7 +127,7 @@ function outerFunc() {
   myInnerFunc();
 ```
 
-* [Var, Let, and Const – What's the Difference?](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)
+* [Var, Let, and Const – What's the Difference?](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/), [JavaScript Let, Const & Var: A Complete Guide](https://www.youtube.com/watch?v=dzEieWaOJE0)
 
 ### Var
 
@@ -137,7 +137,7 @@ The scope is global when a *var* variable is declared outside a function. This m
 
 *var* is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.
 
-*var* variables are hoisted to the top of their scope and initialized with a value of undefined.
+*var* variables are hoisted to the top of their scope and initialized with a value of *undefined*.
 
 ``` javascript
 var greeter = "hey hi";
@@ -286,3 +286,5 @@ const batman = new Hero('Batman');
 ```
 
 Now you can use *batman.logName* as a callback without any manual binding of *this*.
+
+* [Spread Operator (video)](https://www.youtube.com/watch?v=pYI-UuZVtHI&t=792s)
