@@ -173,7 +173,7 @@ So, since *times > 3* returns true, *greeter* is redefined  to *"say Hello inste
 
 A variable declared in a block with *let* is only available for use within that block.
 
-Just like *var*, a variable declared with let can be updated within its scope. Unlike *var*, a *let* variable cannot be re-declared within its scope. So while this will work:
+Just like *var*, a variable declared with *let* can be updated within its scope. Unlike *var*, a *let* variable cannot be re-declared within its scope. So while this will work:
 
 ``` javascript
 let greeting = "say Hi";
