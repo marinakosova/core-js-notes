@@ -334,3 +334,45 @@ const fullPalette = {...mainColors, ...accentColors};
 ```
 
 * [Complete Guide to JS Sets (video)](https://www.youtube.com/watch?v=4pRkrVwpLQo&t=1s)
+
+The first thing you need to know is that Sets are collections of UNIQUE values.
+
+Sets often get lumped in with Arrays because they are both data collections, but there are some significant differences:
+Arrays are indexed collections where elements are ordered and retrieved using an index; Sets are keyed collections, where elements are stored using...keys.  Sets do not support random access, re-ordering, and many other features that arrays do support. 
+
+``` javascript
+const hashTags = new Set(["#selfie", "#nofilter"])
+// Set(2) {"#selfie", "#nofilter"}
+```
+
+Note: You cannot pass a non-iterable to *new Set()*  Something like *new Set(1234)* does not work! Neither does *new Set(1,2,3,4)*. You have two choices: pass in an iterable object OR create an empty Set.
+
+### Adding to Sets
+
+ ```jsx
+const annoyingHashTags = new Set();
+annoyingHashTags.add("#YOLO");
+annoyingHashTags.add("#Blessed");
+// Set(2) {"#YOLO", "#Blessed"}
+```
+
+You can only pass a single value at a time to *add()*. If you pass an iterable to *add*, the entire object will be added as a single value:
+
+```jsx
+annoyingHashTags.add(['#GoodVibes', '#Foodie']);
+// Set(3) {"#YOLO", "#Blessed", Array(2)}
+```
+
+### Size
+
+```jsx
+const annoyingHashTags = new Set();
+annoyingHashTags.add("#YOLO");
+annoyingHashTags.add("#Blessed")
+
+annoyingHashTags.size //2
+```
+
+### Checking For Values
+
+Sets do not support random access, but we are able to check if a Set contains a given value using *has()*
