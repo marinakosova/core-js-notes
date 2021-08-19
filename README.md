@@ -287,4 +287,48 @@ const batman = new Hero('Batman');
 
 Now you can use *batman.logName* as a callback without any manual binding of *this*.
 
-* [Spread Operator (video)](https://www.youtube.com/watch?v=pYI-UuZVtHI&t=792s)
+* [Spread Operator (video)](https://www.youtube.com/watch?v=pYI-UuZVtHI&t=792s), [Spread Operator (article)](https://www.notion.so/The-Spread-Operator-b7608512fbd844ec9f27f31740fb7298)
+
+( aka the ... operator)
+
+### Spread & Functions
+
+``` javascript
+const temperatures = [76,72,68,79,54,65];
+Math.min(...temperatures);
+//the same as Math.min(76,72,68,79,54,65)
+```
+
+### Spread & Array Literals
+
+``` javascript
+const parents = ["Lorie", "Steve"];
+const kids = ['Jake', "Annie", "Jess"];
+
+const fullFamily = [...parents, ...kids];
+//["Lorie", "Steve", "Jake", "Annie", "Jess"]
+```
+
+Spread is also commonly used to create a copy of an array.
+
+``` javascript
+const originals = ["Mona Lisa", "American Gothic", "The School of Athens"];
+const copies = [...originals];
+
+originals.push("Nighthawks");
+console.log(copies);
+// ["Mona Lisa", "American Gothic", "The School of Athens"]
+```
+
+### Spread & Object Literals
+
+Just like with arrays, we can use spread to combine existing objects:
+
+
+```jsx
+const mainColors = {brightRed: "#e55039", waterfallBlue: "#38ada9"};
+const accentColors = {lightGrey: "#778ca3", swanWhite: "#f7f1e3"};
+
+const fullPalette = {...mainColors, ...accentColors};
+//{brightRed: "#e55039", waterfallBlue: "#38ada9", lightGrey: "#778ca3", swanWhite: "#f7f1e3"}
+```
