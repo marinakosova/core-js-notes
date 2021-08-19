@@ -332,3 +332,5 @@ const accentColors = {lightGrey: "#778ca3", swanWhite: "#f7f1e3"};
 const fullPalette = {...mainColors, ...accentColors};
 //{brightRed: "#e55039", waterfallBlue: "#38ada9", lightGrey: "#778ca3", swanWhite: "#f7f1e3"}
 ```
+
+* [Complete Guide to JS Sets (video)](https://www.youtube.com/watch?v=4pRkrVwpLQo&t=1s)
