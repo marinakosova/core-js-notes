@@ -345,7 +345,7 @@ const hashTags = new Set(["#selfie", "#nofilter"])
 // Set(2) {"#selfie", "#nofilter"}
 ```
 
-Note: You cannot pass a non-iterable to *new Set()*  Something like *new Set(1234)* does not work! Neither does *new Set(1,2,3,4)*. You have two choices: pass in an iterable object OR create an empty Set.
+Note: You cannot pass a non-iterable to `new Set()`.  Something like `new Set(1234)` does not work! Neither does `new Set(1,2,3,4)`. You have two choices: pass in an iterable object OR create an empty Set.
 
 ### Adding to Sets
 
@@ -356,7 +356,7 @@ annoyingHashTags.add("#Blessed");
 // Set(2) {"#YOLO", "#Blessed"}
 ```
 
-You can only pass a single value at a time to *add()*. If you pass an iterable to *add*, the entire object will be added as a single value:
+You can only pass a single value at a time to `add()`. If you pass an iterable to *add*, the entire object will be added as a single value:
 
 ```jsx
 annoyingHashTags.add(['#GoodVibes', '#Foodie']);
@@ -375,4 +375,20 @@ annoyingHashTags.size //2
 
 ### Checking For Values
 
-Sets do not support random access, but we are able to check if a Set contains a given value using *has()*
+Sets do not support random access, but we are able to check if a Set contains a given value using `has()`.
+
+### Removing Values
+
+To remove a single value from a set, use `delete()`. We can also use `clear()` to empty a set of all values.
+
+### Iterating Sets
+
+Sets are iterable objects, so we can use them with things like `for...of` loops or the spread operator.  Values in a set are ordered by insertion order.
+
+### Why Use Sets?
+
+Sets are definitely not a general replacement for Arrays or other data structures.  They are useful in very specific situations where :
+
+- You need unique values
+- You don't care about random access
+- Order doesn't really matter (there is an order, but you cannot change it)
