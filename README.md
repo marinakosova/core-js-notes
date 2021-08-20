@@ -442,19 +442,12 @@ say('Hello') // 'Hello'
 * [Currying (video)](https://www.youtube.com/watch?v=F_N97iovVbQ)
 
 ``` javascript
-function curry(f) {
-    return function(a) {
-        return function(b) {
-            return f(a, b);
-        };
+function curry(a) {
+    return function(b) {
+        return a + b;
     };
-}
+};
 
-function sum(a, b) {
-    return a + b;
-}
-
-let carriedSum = curry(sum);
-const result = carriedSum(5)(10);
-console.log(result);
+const sum = curry(5)(10);
+console.log(sum);
 ```
