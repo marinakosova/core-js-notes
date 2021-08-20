@@ -14,7 +14,7 @@
 
 *Context* in JavaScript is related to objects.
 
-* [JavaScript data types and data structures (article)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+* [JavaScript data types and data structures (article)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures), [JavaScript data types and functions (video)](https://www.youtube.com/watch?v=1nTshoqGbvg) 
 
 JavaScript is a *loosely typed* and *dynamic* language.
 
@@ -390,7 +390,9 @@ Sets are iterable objects, so we can use them with things like `for...of` loops 
 Sets are definitely not a general replacement for Arrays or other data structures.  They are useful in very specific situations where :
 
 I.You need unique values
+
 II.You don't care about random access
+
 III.Order doesn't really matter (there is an order, but you cannot change it)
 
 * [Temporal Dead Zone (article)](https://www.freecodecamp.org/news/what-is-the-temporal-dead-zone/)
@@ -413,3 +415,16 @@ The `let` and `const` variables exist in the TDZ from the start of their enclosi
 You can see above that if I accessed the age variable earlier than its declaration, it would throw a `ReferenceError`. Because of the TDZ.
 
 But `var` won't do that. `var` is just default initialized to `undefined` unlike the other declaration.
+
+* [Guide to JS Symbols ES6 (video)](https://www.youtube.com/watch?v=4J5hnOCj69w&t=1s)
+
+* [Default Parameters JavaScript ES6 (video)](https://www.youtube.com/watch?v=VQiM9ctxj2E)
+
+``` javascript
+function say(message='Hi') {
+    console.log(message);
+}
+
+say(); // 'Hi'
+say('Hello') // 'Hello'
+```
