@@ -392,3 +392,24 @@ Sets are definitely not a general replacement for Arrays or other data structure
 - You need unique values
 - You don't care about random access
 - Order doesn't really matter (there is an order, but you cannot change it)
+
+* [Temporal Dead Zone (article)](https://www.freecodecamp.org/news/what-is-the-temporal-dead-zone/)
+
+The term to describe the state where variables are unreachable. They are in scope, but they aren't declared.
+
+The `let` and `const` variables exist in the TDZ from the start of their enclosing scope until they are declared.
+
+``` javascript
+{
+ 	// This is the temporal dead zone for the age variable!
+	// This is the temporal dead zone for the age variable!
+	// This is the temporal dead zone for the age variable!
+ 	// This is the temporal dead zone for the age variable!
+	let age = 25; // Whew, we got there! No more TDZ
+	console.log(age);
+}
+```
+
+You can see above that if I accessed the age variable earlier than its declaration, it would throw a `ReferenceError`. Because of the TDZ.
+
+But `var` won't do that. `var` is just default initialized to `undefined` unlike the other declaration.
