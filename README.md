@@ -356,7 +356,7 @@ annoyingHashTags.add("#Blessed");
 // Set(2) {"#YOLO", "#Blessed"}
 ```
 
-You can only pass a single value at a time to `add()`. If you pass an iterable to *add*, the entire object will be added as a single value:
+You can only pass a single value at a time to `add()`. If you pass an iterable to `add`, the entire object will be added as a single value:
 
 ```jsx
 annoyingHashTags.add(['#GoodVibes', '#Foodie']);
@@ -389,9 +389,9 @@ Sets are iterable objects, so we can use them with things like `for...of` loops 
 
 Sets are definitely not a general replacement for Arrays or other data structures.  They are useful in very specific situations where :
 
-- You need unique values
-- You don't care about random access
-- Order doesn't really matter (there is an order, but you cannot change it)
+I.You need unique values
+II.You don't care about random access
+III.Order doesn't really matter (there is an order, but you cannot change it)
 
 * [Temporal Dead Zone (article)](https://www.freecodecamp.org/news/what-is-the-temporal-dead-zone/)
 
