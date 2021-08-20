@@ -439,7 +439,7 @@ say(); // 'Hi'
 say('Hello') // 'Hello'
 ```
 
-* [Currying](https://www.youtube.com/watch?v=F_N97iovVbQ)
+* [Currying (video)](https://www.youtube.com/watch?v=F_N97iovVbQ)
 
 ``` javascript
 function curry(f) {
