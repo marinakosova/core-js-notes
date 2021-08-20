@@ -108,7 +108,6 @@ function OuterFunction() {
     function InnerFunction() {
         alert(outerVariable);
     }
-
     InnerFunction();
 }
 
@@ -119,12 +118,23 @@ function outerFunc() {
     function innerFunc() {
       console.log(outerVar); // => logs "I am outside!"
     }
-  
     return innerFunc;
   }
   
   const myInnerFunc = outerFunc();
   myInnerFunc();
+  
+  // another example
+  function addNumber(numberToAdd) {
+    return function(targetNumber) {
+        return targetNumber + numberToAdd;
+    }
+}
+
+const addFive = addNumber(5);
+debugger;
+const result = addFive(10);
+console.log(result);
 ```
 
 * [Var, Let, and Const – What's the Difference?](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/), [JavaScript Let, Const & Var: A Complete Guide](https://www.youtube.com/watch?v=dzEieWaOJE0)
@@ -427,4 +437,24 @@ function say(message='Hi') {
 
 say(); // 'Hi'
 say('Hello') // 'Hello'
+```
+
+* [Currying](https://www.youtube.com/watch?v=F_N97iovVbQ)
+
+``` javascript
+function curry(f) {
+    return function(a) {
+        return function(b) {
+            return f(a, b);
+        };
+    };
+}
+
+function sum(a, b) {
+    return a + b;
+}
+
+let carriedSum = curry(sum);
+const result = carriedSum(5)(10);
+console.log(result);
 ```
