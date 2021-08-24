@@ -468,6 +468,34 @@ span multiple lines`;
 
 String interpolation `${variable_name}`.
 
+Tagged templates. The expression in line A is a *tagged template*. It is equivalent to invoking `tagFunc()` with the arguments listed in the Array in line B.
+
+``` javascript
+function tagFunc(...args) {
+  return args;
+}
+
+const setting = 'dark mode';
+const value = true;
+
+assert.deepEqual(
+  tagFunc`Setting ${setting} is ${value}!`, // (A)
+  [['Setting ', ' is ', '!'], 'dark mode', true] // (B)
+);
+```
+
+The function `tagFunc` before the first backtick is called a *tag function*. Its arguments are:
+
+I.*Template strings*(first argument): an Array with the text fragments surrounding the interpolations `${}`.
+
+I.I.In the example: `['Setting ', ' is ', '!']`
+
+II.*Substitutions*(remaining arguments): the interpolated values.
+
+II.I.In the example: `'dark mode`' and `true`.
+
+The static (fixed) parts of the literal (the template strings) are kept separate from the dynamic parts (the substitutions).
+
 * [Currying (video)](https://www.youtube.com/watch?v=F_N97iovVbQ)
 
 ``` javascript
