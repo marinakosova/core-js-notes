@@ -439,6 +439,35 @@ say(); // 'Hi'
 say('Hello') // 'Hello'
 ```
 
+* [Template literals (Template strings)](https://www.javascripttutorial.net/es6/javascript-template-literals/)
+
+``` javascript
+let str = `Template literal in ES6`;
+```
+
+You can freely use the single or double quotes in the template literal without escaping.
+
+``` javascript
+let anotherStr = `Here's a template literal`;
+```
+
+If a string contains a backtick, you must escape it using a backslash (`\`) :
+
+``` javascript
+let strWithBacktick = `Template literals use backticks \` insead of quotes`;
+```
+
+The template literals allow you to define multiline strings more easily because you just need to add a new line in the string wherever you want:
+
+``` javascript
+let p =
+`This text
+can
+span multiple lines`;
+```
+
+String interpolation `${variable_name}`.
+
 * [Currying (video)](https://www.youtube.com/watch?v=F_N97iovVbQ)
 
 ``` javascript
@@ -451,7 +480,7 @@ function curry(a) {
 const sum = curry(5)(10);
 console.log(sum);
 ```
-* [Interview challenges (video1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video2)]()
+* [Interview challenges (video #1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video #2)](https://www.youtube.com/watch?v=FfchU1FS2IA)
 
 ``` javascript
 // Reverse a string
