@@ -451,3 +451,67 @@ function curry(a) {
 const sum = curry(5)(10);
 console.log(sum);
 ```
+* [Interview challenges (video1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video2)]()
+
+``` javascript
+// Reverse a string
+// ex. reverseString('hello') === 'olleh'
+function reverseString(str) {
+    let reversedStr = '';
+
+    for (let i = 0; i < str.length; i++) {
+        reversedStr = str[i] + reversedStr;
+    }
+    return reversedStr;
+}
+console.log(reverseString('hello'));
+```
+``` javascript
+//isPalindrome #1
+// ex. isPalindrome('racecar') === true
+function isPalindrome1(str) {
+    let reversedStr = '';
+
+    for (let i = 0; i < str.length; i++) {
+        reversedStr = str[i] + reversedStr;
+    }
+
+    return reversedStr === str;
+}
+console.log(isPalindrome1('racecar'));
+
+
+//isPalindrome #2
+function isPalindrome2(str) {
+    str = String(str);
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== str[str.length - 1 - i]) return false;
+    }
+    return true;
+}
+console.log(isPalindrome2('racecar'));
+```
+``` javascript
+// Reverse a number
+// ex. reverseInt(521) === 125
+function reverseInt(num) {
+    const revString = num.toString().split('').reverse().join('');
+    return parseInt(revString) * Math.sign(num);
+}
+console.log(reverseInt(-521));
+```
+``` javascript
+// Capitalize letters
+// ex. capitalizeLetters("i love") === "I Love"
+function capitalizeLetters(str) {
+    const strArr = str.toLowerCase().split(' ');
+
+    for (let i = 0; i < strArr.length; i++) {
+        strArr[i] = strArr[i].substring(0, 1).toUpperCase() +
+            strArr[i].substring(1);
+    }
+    return strArr.join(' ');
+}
+console.log(capitalizeLetters("i love"));
+```
