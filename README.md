@@ -468,7 +468,9 @@ span multiple lines`;
 
 String interpolation `${variable_name}`.
 
-Tagged templates. The expression in line A is a *tagged template*. It is equivalent to invoking `tagFunc()` with the arguments listed in the Array in line B.
+### Tagged templates
+
+The expression in line A is a *tagged template*. It is equivalent to invoking `tagFunc()` with the arguments listed in the Array in line B.
 
 ``` javascript
 function tagFunc(...args) {
