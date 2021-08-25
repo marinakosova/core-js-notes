@@ -510,6 +510,73 @@ function curry(a) {
 const sum = curry(5)(10);
 console.log(sum);
 ```
+
+* [Promises (article)](https://web.dev/promises/), [Basic Syntax (video)](https://www.youtube.com/watch?v=SmPouEFKOBg)
+
+I. It's a wrapper around any async tasks
+
+II. AJAX calls, reading files, timeouts, geolocation, talk to a database, or anything that would use a callback function
+
+III. Use them to get rid of callback hell
+
+IV. `fetch()` returns a Promise
+
+``` javascript
+let p1 = new Promise((resolve, reject) => {
+    let x = 5;
+    resolve(x); // calling this will call then()
+});
+
+p1.then((ex) => {
+    console.log(ex); // 5
+    return ex;
+}).then((x) => {
+    console.log(x); // 5
+});
+```
+
+With `catch()` method:
+
+``` javascript
+let p1 = new Promise((resolve, reject) => {
+    let x = 5;
+    //resolve(x); // calling this will call then()
+    reject(x);
+});
+
+p1.then((ex) => {
+    console.log(ex); // 5
+    return ex;
+}).then((x) => {
+    console.log(x); // 5
+}).catch(() => {
+    console.log('caught', exx); // caught 5
+});
+```
+
+With async task:
+
+``` javascript
+const rand = () => Math.floor(Math.random() * 10) + 1;
+
+let p1 = new Promise((resolve, reject) => {
+    let x = 5;
+    //resolve(x); // calling this will call then()
+    //reject(x);
+
+    let num = rand();
+    setTimeout(resolve, 1500, num) // async task
+});
+
+p1.then((ex) => {
+    console.log(ex);
+    return ex;
+}).then((x) => {
+    console.log(x);
+});
+```
+
+
 * [Interview challenges (video #1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video #2)](https://www.youtube.com/watch?v=FfchU1FS2IA)
 
 ``` javascript
