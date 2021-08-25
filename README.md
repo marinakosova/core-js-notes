@@ -594,6 +594,7 @@ function reverseString(str) {
 }
 console.log(reverseString('hello'));
 ```
+
 ``` javascript
 //isPalindrome #1
 // ex. isPalindrome('racecar') === true
@@ -620,6 +621,7 @@ function isPalindrome2(str) {
 }
 console.log(isPalindrome2('racecar'));
 ```
+
 ``` javascript
 // Reverse a number
 // ex. reverseInt(521) === 125
@@ -629,6 +631,7 @@ function reverseInt(num) {
 }
 console.log(reverseInt(-521));
 ```
+
 ``` javascript
 // Capitalize letters
 // ex. capitalizeLetters("i love") === "I Love"
@@ -643,6 +646,7 @@ function capitalizeLetters(str) {
 }
 console.log(capitalizeLetters("i love"));
 ```
+
 ``` javascript
 // Max Character
 // ex. maxCharacter('javascript') == 'a'
@@ -668,4 +672,31 @@ function maxCharacter(str) {
     return maxChar;
 }
 console.log(maxCharacter('javascript'));
+```
+
+``` javascript
+// Longest word
+// ex. longestWord('Hello, my name is Marina') === 'Marina'
+function longestWord(sen) {
+    // Create filtered array
+    const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
+
+    //Sort by length
+    const sorted = wordArr.sort(function(a, b) {
+        return b.length - a.length;
+    });
+
+    // If multiple words, put into array
+    const longestWordArr = sorted.filter(function(word) {
+        return word.length === sorted[0].length;
+    });
+
+    // Check if more than one array val
+    if (longestWordArr.length === 1) {
+        return longestWordArr[0];
+    } else {
+        return longestWordArr;
+    }
+}
+console.log(longestWord('Hello, my name is Marina'));
 ```
