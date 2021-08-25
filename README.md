@@ -521,6 +521,8 @@ III. Use them to get rid of callback hell
 
 IV. `fetch()` returns a Promise
 
+V. Will give either Yes or No answer
+
 ``` javascript
 let p1 = new Promise((resolve, reject) => {
     let x = 5;
