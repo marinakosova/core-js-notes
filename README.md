@@ -700,3 +700,48 @@ function longestWord(sen) {
 }
 console.log(longestWord('Hello, my name is Marina'));
 ```
+
+``` javascript
+// Array chunking
+// ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3], [4, 5, 6], [7]]
+function chunkArray(arr, len) {
+    // Init chunked arr
+    const chunkedArr = [];
+    // Set index
+    let i = 0;
+
+    // Loop while index is less than the array length
+    while (i < arr.length) {
+        // Slice out from the index to the index + the chunk length nd push on to the chunked array
+        chunkedArr.push(arr.slice(i, i + len));
+        // Increment by chunk length
+        i += len;
+    }
+    return chunkedArr;
+}
+```
+
+``` javascript
+// Flatten array
+// ex. [[1, 2], [3, 4], [5, 6], [7]] === [1, 2, 3, 4, 5, 6, 7]
+function flattenArray(arrays) {
+    return arrays.reduce(function(a, b) {
+        return a.concat(b);
+    });
+}
+```
+
+``` javascript
+// ANAGRAM
+// ex. 'elbow' === 'below'
+function anagrams(str1, str2) {
+    // sanitaze input strings
+    str1 = str1.toLowerCase.replace(/[W_]+/g, '');
+    str2 = str2.toLowerCase.replace(/[W_]+/g, '');
+
+    const str1Sorted = str1.split('').sort().join('');
+    const str2Sorted = str2.split('').sort().join('');
+
+    return str1Sorted === str2Sorted;
+}
+```
