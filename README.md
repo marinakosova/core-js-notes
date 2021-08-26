@@ -578,6 +578,7 @@ p1.then((ex) => {
 });
 ```
 
+* [Async & Await (video)](https://www.youtube.com/watch?v=krAYA4rvbdA&t=33s)
 
 * [Interview challenges (video #1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video #2)](https://www.youtube.com/watch?v=FfchU1FS2IA)
 
