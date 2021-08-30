@@ -767,3 +767,11 @@ function letterChanges(str) {
     return newStr;
 }
 ```
+
+``` javascript
+// Add All numbers
+// ex. addAll(2, 5, 6, 7) === 20
+function addAll(...numbers) {
+    return numbers.reduce((acc, cur) => acc + cur);
+}
+```
