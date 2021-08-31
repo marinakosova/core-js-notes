@@ -578,9 +578,11 @@ p1.then((ex) => {
 });
 ```
 
-* [Async & Await (video)](https://www.youtube.com/watch?v=krAYA4rvbdA&t=33s), [Async functions: making promises friendly (article](https://web.dev/async-functions/)
+* [Async & Await (video)](https://www.youtube.com/watch?v=krAYA4rvbdA&t=33s), [Async functions: making promises friendly (article)](https://web.dev/async-functions/)
 
-* [Array and Object Destructuring (article)](https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/)
+* [Array and Object Destructuring (article)](https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/), [ES6 JavaScript Destructuring (video)](https://www.youtube.com/watch?v=ktBTYQXBAog)
+
+* [ES6 Rest & Spread operators (video)](https://www.youtube.com/watch?v=QtGbcvZ6774)
 
 * [Interview challenges (video #1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video #2)](https://www.youtube.com/watch?v=FfchU1FS2IA)
 
