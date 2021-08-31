@@ -584,9 +584,9 @@ p1.then((ex) => {
 
 * [ES6 Rest & Spread operators (video)](https://www.youtube.com/watch?v=QtGbcvZ6774)
 
-* [Interview challenges (video #1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video #2)](https://www.youtube.com/watch?v=FfchU1FS2IA)
-
 * [Import and Export (video)](https://www.youtube.com/watch?v=SjxiP5r6mNg&t=37s), [Understanding JavaScript import and export (article)](https://sebhastian.com/javascript-import-export/)
+
+* [Interview challenges (video #1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video #2)](https://www.youtube.com/watch?v=FfchU1FS2IA)
 
 ``` javascript
 // Reverse a string
