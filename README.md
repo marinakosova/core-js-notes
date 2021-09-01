@@ -584,9 +584,10 @@ p1.then((ex) => {
 
 * [ES6 Rest & Spread operators (video)](https://www.youtube.com/watch?v=QtGbcvZ6774)
 
-* [Import and Export (video)](https://www.youtube.com/watch?v=SjxiP5r6mNg&t=37s), [Understanding JavaScript import and export (article)](https://sebhastian.com/javascript-import-export/)
+* [Import and Export (video)](https://www.youtube.com/watch?v=SjxiP5r6mNg&t=37s), [Understanding JavaScript import and export (article)](https://sebhastian.com/javascript-import-export/), [Modules, import and export (video)](https://www.youtube.com/watch?v=SmBb2SSZqFU)
 
-* [Class (video)](https://www.youtube.com/watch?v=3SaedVlvo5E&t=4120s), [Intro to JavaScript Classes (video)](https://www.youtube.com/watch?v=_D6ilsRB9tw)
+* [Class (video)](https://www.youtube.com/watch?v=3SaedVlvo5E&t=4120s), [Intro to JavaScript Classes (video)](https://www.youtube.com/watch?v=_D6ilsRB9tw), [
+Understanding Classes in JavaScript (article)](https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript)
 
 ``` javascript
 /******************************************
