@@ -920,3 +920,23 @@ function addAll(...numbers) {
 ```
 
 * [Learn Advanced JavaScript (video)](https://www.youtube.com/watch?v=Xgr79XZpr0M)
+
+### Scope
+
+``` javascript
+var foo = 'bar';
+
+function bar() {
+    var foo = 'baz';
+
+    function baz(foo) {
+        foo = 'bam';
+        bam = 'yay';
+    }
+    baz();
+}
+bar();
+foo; // 'bar'
+bam; // 'yay'
+baz(); // Error!
+```
