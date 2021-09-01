@@ -918,3 +918,5 @@ function addAll(...numbers) {
     return numbers.reduce((acc, cur) => acc + cur);
 }
 ```
+
+* [Learn Advanced JavaScript (video)](https://www.youtube.com/watch?v=Xgr79XZpr0M)
