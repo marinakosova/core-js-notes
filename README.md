@@ -689,6 +689,41 @@ console.log(myObj.x) // 10
 console.log(myObj.y) // 20
 ```
 
+* [Introduction to Prototypes in JS (video)](https://www.youtube.com/watch?v=dgpaY5wjJ9w), [Visually Understanding JavaScript Prototypes (video)](https://www.youtube.com/watch?v=01jVgCK-HX4)
+
+``` javascript
+/***********************************************************    
+// [ toString, valueOf, isPrototypeOf, hasOwnProperty,....]
+//  obj ==> obj.prototype (Object prototype) ==> null
+Object Prototypes in JavaScript  
+***********************************************************/
+
+let obj1 = {
+    prop1: () => console.log('prop1')
+};
+
+let obj2 = {
+    prop2: () => console.log('prop2')
+}
+Object.setPrototypeOf(obj2, obj1);
+//
+//obj2.prop2();
+//obj2.prop1();
+//obj2.toString();
+
+//Object.getPrototypeOf(obj2).prop1();
+console.log(Object.getOwnPropertyNames(obj2) )
+console.log(Object.getOwnPropertyNames(obj1) )
+console.log(Object.getOwnPropertyNames( Object.getPrototypeOf(obj1) ) )
+
+for(let prop in obj2){
+    console.log(prop);
+}
+
+//Object.create()
+//Object.assign()
+```
+
 * [Interview challenges (video #1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video #2)](https://www.youtube.com/watch?v=FfchU1FS2IA)
 
 ``` javascript
