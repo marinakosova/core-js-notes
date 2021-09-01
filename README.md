@@ -586,6 +586,109 @@ p1.then((ex) => {
 
 * [Import and Export (video)](https://www.youtube.com/watch?v=SjxiP5r6mNg&t=37s), [Understanding JavaScript import and export (article)](https://sebhastian.com/javascript-import-export/)
 
+* [Class (video)](https://www.youtube.com/watch?v=3SaedVlvo5E&t=4120s), [Intro to JavaScript Classes (video)](https://www.youtube.com/watch?v=_D6ilsRB9tw)
+
+``` javascript
+/******************************************
+Intro to Classes in JS
+******  JAVASCRIPT STILL USES PROTOTYPES  ******
+class
+extends
+constructor
+super
+get
+set
+static
+******************************************/
+class Vehicle{
+    constructor(_wheels){
+        this.numWheels = _wheels;
+    }
+    get wheels(){
+        return this.numWheels;
+    }
+    set wheels(_wheels){
+        this.numWheels = _wheels;
+    }
+    static accelerate(){
+        console.log('go faster');
+    }
+    static decelerate(){
+        console.log('go slower');
+    }
+    justAMethod(){
+        //like a function
+    }
+}
+
+let car = new Vehicle(4);
+let car1 = new Vehicle(2);
+let car2 = new Vehicle(6);
+car.wheels = 7;
+console.log(car.wheels);
+Vehicle.accelerate();
+
+class Car extends Vehicle{
+    constructor(_wheels, _make, _model, _year){
+        super(_wheels);
+        this.make = _make;
+        this.model = _model;
+        this.year = _year;
+    }
+    
+    info(){
+        console.log('The', this.make, this.model, 'was made in', this.year, 'and has', this.wheels, 'wheels');
+    }
+}
+
+let ferrari = new Car(4, 'Ferrari', 'Testarossa', 1985);
+ferrari.info();
+Car.accelerate();
+```
+
+* [Object property shorthand]()
+
+When assigning a variable to an object property, if the variable name is equal to the property name, you can do the following:
+
+``` javascript
+const x = 10;
+const myObj = { x };
+console.log(myObj.x) // 10
+```
+### Explanation
+
+Usually (pre-ES2015) when you declare a new object literal and want to use variables as object properties values, you would write this kind of code:
+
+``` javascript
+const x = 10;
+const y = 20;
+
+const myObj = {
+  x: x, // assigning x variable value to myObj.x
+  y: y // assigning y variable value to myObj.y
+};
+
+console.log(myObj.x) // 10
+console.log(myObj.y) // 20
+```
+
+As you can see, this is quite repetitive because the properties name of myObj are the same as the variable names you want to assign to those properties.
+
+With ES2015, when the variable name is the same as the property name, you can do this shorthand:
+
+``` javascript
+const x = 10;
+const y = 20;
+
+const myObj = {
+  x,
+  y
+};
+
+console.log(myObj.x) // 10
+console.log(myObj.y) // 20
+```
+
 * [Interview challenges (video #1)](https://www.youtube.com/watch?v=M2bJBuaOeOQ), [Interview challenges (video #2)](https://www.youtube.com/watch?v=FfchU1FS2IA)
 
 ``` javascript
