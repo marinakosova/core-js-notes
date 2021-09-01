@@ -956,3 +956,29 @@ var foo = function bar() {
 foo();
 bar(); // Error!
 ```
+
+### Lexical Scope
+
+``` javascript
+function foo() {
+    var bar = 'bar';
+
+    function baz() {
+        console.log(bar); // lexical!
+    }
+    baz();
+}
+foo();
+```
+
+### Cheating Lexical scope eval()
+
+``` javascript
+var bar = 'bar';
+
+function foo(str) {
+    eval(str); //  cheating
+    console.log(bar); // 42
+}
+foo('var bar = 42;');
+```
