@@ -940,3 +940,19 @@ foo; // 'bar'
 bam; // 'yay'
 baz(); // Error!
 ```
+
+### FD vs. FE
+
+``` javascript
+var foo = function bar() {
+    var foo = 'baz';
+
+    function baz(foo) {
+        foo = bar;
+        foo; // function...
+    }
+    baz();
+};
+foo();
+bar(); // Error!
+```
