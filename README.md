@@ -1015,3 +1015,34 @@ function c(foo) {
     return a(foo * 2);
 }
 ```
+
+### This: implicit & default binding
+
+``` javascript
+function foo() {
+    console.log(this.bar);
+}
+
+var bar = 'bar1';
+var o2 = { bar: 'bar2', foo: foo };
+var o3 = { bar: 'bar3', foo: foo };
+
+foo(); // 'bar1'
+o2.foo(); // 'bar2'
+o3.foo(); // 'bar3'
+```
+
+### This: binding confusion
+
+``` javascript
+function foo() {
+    var bar = 'bar1';
+    baz();
+}
+
+function baz() {
+    console.log(this.bar);
+}
+var bar = 'bar2';
+foo(); // 'bar2'
+```
