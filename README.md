@@ -982,3 +982,17 @@ function foo(str) {
 }
 foo('var bar = 42;');
 ```
+
+### IIFE
+
+If you need to make some functions private, wrap them in IIFE statement. And if you need to make some functions public, add them to the window object. Naming your IIFE is a good practice.
+
+``` javascript
+var foo = 'foo';
+
+(function() {
+    var foo = 'foo2';
+    console.log(foo); // 'foo2'
+})();
+console.log(foo); // 'foo'
+```
