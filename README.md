@@ -971,7 +971,7 @@ function foo() {
 foo();
 ```
 
-### Cheating Lexical scope eval()
+### Cheating Lexical scope `eval()` and `with()`
 
 ``` javascript
 var bar = 'bar';
@@ -995,4 +995,23 @@ var foo = 'foo';
     console.log(foo); // 'foo2'
 })();
 console.log(foo); // 'foo'
+```
+
+### Hoisting: recursion
+
+``` javascript
+a(1); // 39 (36 + 3 in call stack)
+
+function a(foo) {
+    if (foo > 20) return foo;
+    return b(foo + 2);
+}
+
+function b(foo) {
+    return c(foo) + 1;
+}
+
+function c(foo) {
+    return a(foo * 2);
+}
 ```
