@@ -919,6 +919,11 @@ function addAll(...numbers) {
 }
 ```
 
+* [Leetcode examples](https://www.youtube.com/watch?v=C6CbIReHsNk&list=PL0k-9Y7O1GwccXKHRzmvVj17yB7T9pjTo)
+
+``` javascript
+
+
 * [Learn Advanced JavaScript (video)](https://www.youtube.com/watch?v=Xgr79XZpr0M)
 
 ### Scope
