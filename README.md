@@ -921,7 +921,38 @@ function addAll(...numbers) {
 
 * [Leetcode examples](https://www.youtube.com/watch?v=C6CbIReHsNk&list=PL0k-9Y7O1GwccXKHRzmvVj17yB7T9pjTo)
 
+
 ``` javascript
+// Valid Parentheses
+// ex. Input: s = "()[]{}", Output: true
+var isValid = function(s) {
+    if (s.length < 2) return false;
+
+    const values = {
+        "(": ")",
+        "{": "}",
+        "[": "]",
+    };
+
+    let stack = [];
+    let arr = s.toString().split('');
+
+    for (let i = 0; i < arr.length; i++) {
+        if (values[s[i]]) { 
+            stack.push(s[i]);
+        } else {
+            let anotherBracket = stack.pop(s[i]);
+
+            if (values[anotherBracket] != s[i]) return false;
+        }
+    }
+    if (stack.length > 0) {
+        return false;
+    }
+    return true;
+}
+console.log(isValid("()[]{}"));
+```
 
 
 * [Learn Advanced JavaScript (video)](https://www.youtube.com/watch?v=Xgr79XZpr0M)
