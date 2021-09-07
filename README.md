@@ -1095,3 +1095,62 @@ var obj = { bar: 'bar2' };
 foo(); // 'bar1'
 foo.call(obj); // 'bar2'
 ```
+
+### This: hard binding
+
+``` javascript
+function foo() {
+    console.log(this.bar);
+}
+var obj = { bar: 'bar' };
+var obj2 = { bar: 'bar2' };
+
+var orig = foo;
+foo = function() { orig.call(obj); };
+
+foo(); // 'bar'
+foo.call(obj2); // 'bar'
+```
+
+``` javascript
+// hard binding
+function bind(fn, o) {
+    return function() {
+        fn.call(o);
+    };
+}
+
+function foo() {
+    console.log(this.bar);
+}
+
+var obj = { bar: 'bar' };
+var obj2 = { bar: 'bar2' };
+
+foo = bind(foo, obj);
+
+foo(); // 'bar'
+foo.call(obj2); // 'bar'
+```
+
+``` javascript
+// hard binding
+if (!Function.prototype.bind2) {
+    Function.prototype.bind2 =
+        function(o) {
+            var fn = this; // the function
+            return function() {
+                return fn.apply(o, arguments);
+            };
+        };
+}
+
+function foo(baz) {
+    console.log(this.bar + ' ' + baz);
+}
+
+var obj = { bar: 'bar' };
+foo = foo.bind2(obj);
+
+foo('baz'); // 'bar baz';
+```
