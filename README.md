@@ -1154,3 +1154,30 @@ foo = foo.bind2(obj);
 
 foo('baz'); // 'bar baz';
 ```
+
+### This: new
+
+``` javascript
+// 4 things happens when you use new keyword:
+// 1. Creates a brand new object
+// 2. Object gets "linked" to a different object
+// 3. This brand new object gets bound to the `this` keyword for the purpose of that function call
+// 3. Этот новый объект привязывается к ключевому слову `this` для вызова этой функции.
+// 4. If that function does not return anything it will implicitly insert `return this`.
+function foo() {
+    this.baz = 'baz';
+    console.log(this.bar + ' ' + baz); // bar is undefined and baz is undefined
+}
+
+var bar = 'bar';
+var baz = new foo(); // 'undefined undefined'
+
+console.log(baz.baz); // 'baz' because newly created object has property `baz`
+
+// Questions to ask yourself when working with `this`:
+// 1. Was the function called with `new`?
+// 2. Was the function called with `call` or `apply` specifying an explicit this?
+// 3. Was the function called via a containing/owning object (context)?
+// 4. DEFAULT: global object (except strict mode).
+```
+
