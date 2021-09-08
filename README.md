@@ -1181,3 +1181,77 @@ console.log(baz.baz); // 'baz' because newly created object has property `baz`
 // 4. DEFAULT: global object (except strict mode).
 ```
 
+### Closure
+
+Closure is when a function "remembers" its lexical scope even when the function is executed outside that lexical scope.
+
+``` javascript
+function foo() {
+    var bar = 'bar';
+
+    function baz() {
+        console.log(bar);
+    }
+
+    bam(baz);
+}
+
+function bam(baz) {
+    baz(); // 'bar'
+}
+
+foo();
+```
+
+``` javascript
+function foo() {
+    var bar = 'bar';
+
+    return function() {
+        console.log(bar);
+    };
+}
+
+function bam() {
+    foo()(); // 'bar'
+}
+
+bam();
+```
+
+### Closure: shared scope
+
+``` javascript
+function foo() {
+    var bar = 0;
+
+    setTimeout(function() {
+        console.log(bar++);
+    }, 100);
+
+    setTimeout(function() {
+        console.log(bar++);
+    }, 200);
+}
+
+foo(); // 0 1
+```
+
+### Closure: nested scope
+
+``` javascript
+function foo() {
+    var bar = 0;
+
+    setTimeout(function() {
+        var baz = 1;
+        console.log(bar++);
+
+        setTimeout(function() {
+            console.log(bar + baz);
+        }, 200);
+    }, 100);
+}
+
+foo(); // 0 2
+```
